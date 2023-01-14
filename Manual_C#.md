@@ -40,3 +40,14 @@ string username = Console.ReadLine();
  ```sh
     new Random().Next(1,10);
 ```
+## Ветвление
+```sh
+if(Условие)
+{
+    Набор действий
+}
+else
+{
+    Набор действий 2
+}
+```
