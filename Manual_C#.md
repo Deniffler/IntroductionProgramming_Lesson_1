@@ -34,3 +34,9 @@ string username = Console.ReadLine();
     bool alive = true;
     bool isDead = false;
     ```
+## Генератор случайных чисел
+
+Команда `new Random().Next(1,10);` сгенерирует случайное ***целое*** число в диапазоне от ```n``` до ```n-1```
+ ```sh
+    new Random().Next(1,10);
+```
