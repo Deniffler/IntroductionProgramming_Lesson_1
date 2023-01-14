@@ -1,20 +1,31 @@
-﻿Console.Clear();
-//Console.SetCursorPosition(10,4);
-//Console.WriteLine("*");
+﻿// Очистка консоли
+Console.Clear();
+// Устанавливаем координаты первых 3х точек
 int x1 = 100, y1 = 1, 
-x2 = 1, y2 = 45,
-x3 = 200, y3 = 45;
+    x2 = 1, y2 = 45,
+    x3 = 200, y3 = 45;
+// Устанавливаем курсор в первую точку    
 Console.SetCursorPosition(x1,y1);
+// Выводим в консоль первую точку
 Console.WriteLine("*");
+// Устанавливаем курсор во вторую точку    
 Console.SetCursorPosition(x2,y2);
+// Выводим в консоль 2-ю точку
 Console.WriteLine("*");
+// Устанавливаем курсор в третью точку 
 Console.SetCursorPosition(x3,y3);
+// Выводим в консоль третью точку
 Console.WriteLine("*");
+// Объявляем переменную и присваиваем значения координать первой точки
 int x = x1, y = y1;
+//Объявляем счетчик с начальным значением равным = 0
 int count = 0;
+// Цикл While до тех пор, пока счетчик меньше 10000
 while (count < 100000)
 {
+    // Рандомизер из 3 значений
     int Rand = new Random().Next(0,3); // интервал [0..3) 0, 1, 2
+    // Ищем середину отрезка
     if (Rand == 0)
     {
         x = (x + x1)/2;
@@ -30,7 +41,10 @@ while (count < 100000)
         x = (x + x3)/2;
         y = (y + y3)/2;
     }
-    Console.SetCursorPosition(x,y);
+//Утанавливаем курсор в позицию x,y
+Console.SetCursorPosition(x,y);
+// Выводим в консоль точку
 Console.WriteLine("*");
+// Увеличиваем счетчик на 1 
 count ++;
 }
